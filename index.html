@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>billboard.js</title>
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- egjs-flicking -->
+    <script src="https://cdn.jsdelivr.net/npm/@egjs/flicking/dist/flicking.pkgd.min.js"></script>
+
+    <!-- billboard.js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.pkgd.min.js"></script>
+
+    <!-- github button -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    <!-- highlight.js -->
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" />
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/rainbow.min.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>
+</head>
+<body>
+
+<div id="wrapper">
+    <div>
+        <p style="margin-top:15%">
+            <img src="https://naver.github.io/billboard.js/img/logo/billboard.js-white.svg" style="width:90%">
+            <img src="./img/deview-logo.png" style="margin-top:20px;width:50%">
+        </p>
+        <p>
+            billboard.js를 이용해 얼마나 빠르고<br>
+            쉽게 차트를 생성 할 수 있는지<br>
+            직접 확인해 보세요!<br><br>
+
+            <a class="github-button" href="https://github.com/naver/billboard.js" data-icon="octicon-star" data-show-count="true" aria-label="Star naver/billboard.js on GitHub">Star</a><br><br>
+
+            화면을 오른쪽에서<br>
+            왼쪽 방향으로 넘겨 보세요.
+        </p>
+        <h1 style="border:none;margin:0">&larr;</h1>
+    </div>
+    <div>
+        <h1>Step 1</h1>
+        <p>
+            아래의 방법들 중 하나의 방법을<br>
+            사용해 설치하실 수 있습니다.
+        </p>
+        <h2>1) npm</h2>
+        <pre><code class="bash">$ npm install billboard.js</code></pre>
+
+        <h2>2) CDN</h2>
+        <ul>
+            <li><a href="https://cdnjs.com/libraries/billboard.js" target="cdn">cdnjs</a></li>
+            <li><a href="https://cdn.jsdelivr.net/npm/billboard.js/dist/" target="cdn">jsDelivr</a></li>
+            <li><a href="https://unpkg.com/billboard.js/dist/" target="cdn">unpkg</a></li>
+        </ul>
+
+        <h2>3) GitHub에서 직접 다운로드</h2>
+        <ul>
+            <li><a href="https://github.com/naver/billboard.js/tree/gh-pages/release" target="cdn">billboard.js</a> (GitHub repo)</li>
+        </ul>
+    </div>
+    <div>
+        <h1>Step 2</h1>
+
+        <p>
+            필요한 파일들을 로딩 합니다.
+        </p>
+        <ul>
+            <li>D3.js v4+ 이상</li>
+            <li>billboard.js</li>
+            <li>billboard.css (기본 스타일 파일)</li>
+        </ul>
+
+        <pre><code class="xml">&lt;!-- D3.js를 로딩 -->
+&lt;script src="d3.v4.min.js">&lt;/script>
+
+&lt;!-- billboard.js와 기본 스타일을 로딩 -->
+&lt;script src="billboard.js">&lt;/script>
+&lt;link rel="stylesheet" href="billboard.css"></code></pre>
+
+        <p>
+            또는 ESM import도 가능합니다.
+        </p>
+        <pre><code class="javascript">import {bb} from "billboard.js";</code></pre>
+    </div>
+    <div>
+        <h1>Step 3</h1>
+
+        <div style="margin-top:20%">
+            <p>차트가 노출될 요소를 설정해 주세요.</p>
+
+            <pre><code class="xml">&lt;!-- 차트가 노출될 요소 -->
+&lt;div id="chart">&lt;/div></code></pre>
+        </div>
+    </div>
+    <div>
+        <h1>Step 4</h1>
+        <p>
+            코드를 수정해 bar 유형 차트를 만드세요.<br>
+            <a href="https://naver.github.io/billboard.js/release/latest/doc/Options.html#.data:type" target="api">data.type 종류 보기</a>
+        </p>
+
+        <textarea id="generate">bb.generate({
+    data: {
+        type: "line",
+        columns: [
+            ["data1", 30, 20, 10, 25],
+            ["data2", 13, 10, 14, 50]
+        ]
+    }
+})</textarea>
+        <p style="text-align:center;margin:0">
+            <button onclick="generate()">차트 생성하기</button>
+        </p>
+
+        <div id="chart"></div>
+    </div>
+</div>
+
+<div id="indicator">
+    <p></p>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

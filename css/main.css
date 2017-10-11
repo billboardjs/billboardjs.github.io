@@ -1,0 +1,109 @@
+@font-face {
+    font-family: 'Daehan';
+    font-style: normal;
+    font-weight: 700;
+    src: local("Daehan"),
+        url('//cdn.jsdelivr.net/korean-webfonts/1/corps/yoon/Daehan/DaehanR.woff2') format('woff2'),
+        url('//cdn.jsdelivr.net/korean-webfonts/1/corps/yoon/Daehan/DaehanR.woff') format('woff');
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    color: #fff;
+    font-family: 'Daehan', 'Nanum Gothic';
+    line-height: 1.5;
+
+    /* background pattern from: http://lea.verou.me/css3patterns/#carbon-fibre */
+    background: radial-gradient(black 15%, transparent 16%) 0 0,
+        radial-gradient(black 15%, transparent 16%) 8px 8px,
+        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+    background-color:#282828;
+    background-size:16px 16px;
+}
+
+a {
+    color: #fff;
+}
+
+#wrapper {
+    min-height: 93%;
+    height: 93%;
+    margin: 10px;
+}
+
+#wrapper h1 {
+    border-top: solid 1px #fff;
+    border-bottom: solid 1px #fff;
+    text-align: center;
+    margin-top: 3px;
+}
+
+#wrapper div p {
+    text-align: center;
+}
+
+#indicator {
+    height: 7%;
+}
+
+#indicator p {
+    text-align: center;
+    margin: -10px 0 0 0;
+}
+
+#indicator span {
+    width: 8px;
+    height: 8px;
+    margin: 0 5px;
+    display: inline-block;
+    border: solid 2px #fbb000;
+    border-radius: 6px;
+}
+
+#indicator .on {
+    background-color: #fbb000;
+}
+
+button {
+    border: solid 2px #fff;
+    border-radius: 15px;
+    font-size: 15px;
+    padding: 3px 20px;
+    background: transparent;
+    color: #fff;
+}
+
+#generate {
+    width: 100%;
+    height: 130px;
+    font-size: 14px;
+    line-height: 1;
+}
+
+#chart {
+    width: 90%;
+    height: calc(100vh - 420px);
+}
+
+.bb-tooltip {
+    color: #000;
+}
+
+.tick text, .bb-legend-item text {
+    fill: white;
+}
+
+.bb line, .bb-axis .domain {
+    stroke: #fff;
+}
+
+.bb-chart-arc .bb-gauge-value {
+    stroke: #fff;
+    transform: translateY(-25px);
+}
+
+.bb-shape.bb-line {
+    stroke-width: 2px;
+}
