@@ -66,6 +66,12 @@ a {
     background-color: #fbb000;
 }
 
+#chart-type {
+    font-size: 20px;
+    color: #d6ff00;
+    text-decoration: underline;
+}
+
 button {
     border: solid 2px #fff;
     border-radius: 15px;
