@@ -101,7 +101,7 @@ button {
     fill: white;
 }
 
-.bb line, .bb-axis .domain {
+.bb line, .bb-axis .domain, .bb-axis .tick line{
     stroke: #fff;
 }
 
