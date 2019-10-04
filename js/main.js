@@ -17,7 +17,7 @@ function getRandom(min, max) {
 	return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-var types = ["line", "spline", "step", "area", "area-spline", "area-step", "bar", "scatter", "pie", "donut", "gauge"];
+var types = ["line", "spline", "step", "area", "area-spline", "area-step", "bar", "scatter", "pie", "donut"];
 
 !function() {
 	var f = new eg.Flicking("#wrapper").on({

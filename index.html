@@ -7,28 +7,28 @@
     <link rel="stylesheet" href="css/main.css">
 
     <!-- egjs-flicking -->
-    <script src="https://cdn.jsdelivr.net/npm/@egjs/flicking/dist/flicking.pkgd.min.js"></script>
+    <script src="https://unpkg.com/@egjs/flicking@2.0.0/dist/flicking.pkgd.min.js"></script>
 
     <!-- billboard.js -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.css">
+    <link rel="stylesheet" href="css/insight.css">
     <script src="https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.pkgd.min.js"></script>
 
     <!-- github button -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 
     <!-- highlight.js -->
-    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" />
-    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/rainbow.min.css" />
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/rainbow.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>
 </head>
 <body>
 
 <div id="wrapper">
     <div>
-        <p style="margin-top:15%">
+        <p style="margin-top:10%">
             <img src="https://naver.github.io/billboard.js/img/logo/billboard.js-white.svg" style="width:90%">
-            <img src="./img/soscon-logo.png" style="margin:0;width:45%">
+            <img src="./img/soscon-logo.png" style="margin:0;width:40%">
         </p>
         <p style="margin-bottom:0">
             billboard.js를 이용해 얼마나 빠르고<br>
@@ -42,7 +42,7 @@
             화면을 오른쪽에서<br>
             왼쪽 방향으로 넘겨 보세요.
         </p>
-        <h1 style="border:none;margin:0">&larr;</h1>
+        <h1 style="border:none;margin:0;background:none;color:yellow;font-size:4em;">&larr;</h1>
     </div>
     <div>
         <h1>Step 1</h1>
@@ -75,14 +75,20 @@
             <li>D3.js v4+ 이상</li>
             <li>billboard.js</li>
             <li>billboard.css (기본 스타일 파일)</li>
+            <li>dist/theme/insight.css (또는 테마)</li>
         </ul>
 
         <pre><code class="xml">&lt;!-- D3.js를 로딩 -->
-&lt;script src="d3.v4.min.js">&lt;/script>
+&lt;script src="d3.v5.min.js">&lt;/script>
 
-&lt;!-- billboard.js와 기본 스타일을 로딩 -->
+&lt;!-- billboard.js 로딩 -->
 &lt;script src="billboard.js">&lt;/script>
-&lt;link rel="stylesheet" href="billboard.css"></code></pre>
+
+&lt;!-- 스타일 파일을 로딩 -->
+&lt;!-- 기본 -->
+&lt;link href="billboard.css" rel="stylesheet">
+&lt;!-- 또는 테마 -->
+&lt;link href="dist/theme/insight.css" rel="stylesheet"></code></pre>
 
         <p>
             또는 ESM import도 가능합니다.
@@ -103,15 +109,15 @@
         <h1>Step 4: 미션수행</h1>
         <p>
             코드를 수정해 <span id="chart-type">bar</span> 유형 차트를 만드세요.<br>
-            <a href="https://naver.github.io/billboard.js/release/latest/doc/Options.html#.data:type" target="api">data.type 종류 보기</a>
+            <a href="https://naver.github.io/billboard.js/release/latest/doc/Options.html#.data%25E2%2580%25A4type" target="api">data.type 종류 보기</a>
         </p>
 
         <textarea id="generate">bb.generate({
     data: {
         type: "line",
         columns: [
-            ["data1", 30, 20, 10, 25],
-            ["data2", 13, 10, 14, 50]
+            ["data1", 30, 20, 10],
+            ["data2", 13, 10, 14]
         ]
     }
 })</textarea>
