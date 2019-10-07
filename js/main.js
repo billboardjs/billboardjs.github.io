@@ -7,7 +7,9 @@ function generate() {
 	} catch(e) {}
 
 	if (c.internal.config.data_type === currentType) {
+		document.querySelector("button").style.backgroundColor = "green";
 		alert("짝짝~! 미션을 성공 하셨습니다. :)");
+
 	} else {
 		alert("다시 시도해 주세요~!\n'"+ currentType +"' 유형의 차트를 생성해 주셔야 합니다.");
 	}
