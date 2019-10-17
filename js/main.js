@@ -30,7 +30,7 @@ var types = ["line", "spline", "step", "area", "area-spline", "area-step", "bar"
 	});
 
 	// chart type update per hour
-	document.getElementById("chart-type").innerHTML = window.currentType = types[getRandom(0, types.length)];
+	document.getElementById("chart-type").innerHTML = window.currentType = types[getRandom(0, types.length - 1)];
 
 	// indicator
 	document.querySelector("#indicator p").innerHTML =
